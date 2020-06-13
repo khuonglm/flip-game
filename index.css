@@ -1,0 +1,38 @@
+body {
+    margin-left: 500px;
+}
+
+.done {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    border: 1px solid lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+
+.frontface, .backface {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+
+.backface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightpink;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
